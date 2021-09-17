@@ -15,7 +15,7 @@ application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 /vendor/
-README.md
+loco.txt
 
 application/config/config.php
 application/config/database.php
