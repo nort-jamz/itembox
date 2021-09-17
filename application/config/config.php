@@ -24,10 +24,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-// Local
-// $config['base_url'] = 'http://localhost/itembox/';
-// Server
-$config['base_url'] = 'https://itembox.disening.com/';
+
+// CONFIGURACION URL DINAMICO
+if ($_SERVER['HTTP_HOST'] == "itembox.disening.com"){
+    $config['base_url'] = 'https://itembox.disening.com/';
+} else {
+    $config['base_url'] = 'http://localhost/itembox/';
+}
+
 
 /*
 |--------------------------------------------------------------------------
