@@ -26,6 +26,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 // Local
 $config['base_url'] = 'http://localhost/itembox/';
+// Server
+// $config['base_url'] = 'https://itembox.disening.com/;
 
 /*
 |--------------------------------------------------------------------------
