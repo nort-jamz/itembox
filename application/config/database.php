@@ -99,4 +99,29 @@ if($_SERVER['HTTP_HOST'] == "itembox.disening.com"){
 		'failover' => array(),
 		'save_queries' => TRUE
 	);
+} else {
+	$db['default'] = array(
+		'dsn'	=> '',
+		// 'hostname' => 'localhost',
+		// 'username' => 'darkqwiq_itembox',
+		// 'password' => 'nortmadrid203327',
+		// 'database' => 'darkqwiq_itembox',
+		 'hostname' => 'localhost',
+		 'username' => 'root',
+		'password' => '',
+		'database' => 'itembox',
+		'dbdriver' => 'mysqli',
+		'dbprefix' => '',
+		'pconnect' => FALSE,
+		'db_debug' => (ENVIRONMENT !== 'production'),
+		'cache_on' => FALSE,
+		'cachedir' => '',
+		'char_set' => 'utf8',
+		'dbcollat' => 'utf8_general_ci',
+		'swap_pre' => '',
+		'encrypt' => FALSE,
+		'compress' => FALSE,
+		'stricton' => FALSE,
+		'failover' => array(),
+		'save_queries' => TRUE
 }
