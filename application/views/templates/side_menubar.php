@@ -5,84 +5,89 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         
-        <!-- MENU DASHBOARD -->
+        <!-- MENULI DASHBOARD -->
         <li id="dashboardMainMenu">
           <a href="<?php echo base_url('dashboard') ?>">
-            <i class="fa fa-dashboard"></i> <span>Dashboard1</span>
+            <i class="fa fa-dashboard"></i> <span>Panel de control</span>
           </a>
         </li>
 
+        <!-- MENULI USUARIOS -->
         <?php if($user_permission): ?>
           <?php if(in_array('createUser', $user_permission) || in_array('updateUser', $user_permission) || in_array('viewUser', $user_permission) || in_array('deleteUser', $user_permission)): ?>
             <li class="treeview" id="mainUserNav">
             <a href="#">
               <i class="fa fa-users"></i>
-              <span>Users</span>
+              <span>Accesos Web</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
               <?php if(in_array('createUser', $user_permission)): ?>
-              <li id="createUserNav"><a href="<?php echo base_url('users/create') ?>"><i class="fa fa-circle-o"></i> Add User</a></li>
+              <li id="createUserNav"><a href="<?php echo base_url('users/create') ?>"><i class="fa fa-circle-o"></i> Agregar Usuarios Web</a></li>
               <?php endif; ?>
 
               <?php if(in_array('updateUser', $user_permission) || in_array('viewUser', $user_permission) || in_array('deleteUser', $user_permission)): ?>
-              <li id="manageUserNav"><a href="<?php echo base_url('users') ?>"><i class="fa fa-circle-o"></i> Manage Users</a></li>
+              <li id="manageUserNav"><a href="<?php echo base_url('users') ?>"><i class="fa fa-circle-o"></i> Gestionar Usuarios Web</a></li>
             <?php endif; ?>
             </ul>
           </li>
           <?php endif; ?>
 
+          <!-- MENULI AUTORIZACIONES -->
           <?php if(in_array('createGroup', $user_permission) || in_array('updateGroup', $user_permission) || in_array('viewGroup', $user_permission) || in_array('deleteGroup', $user_permission)): ?>
             <li class="treeview" id="mainGroupNav">
               <a href="#">
                 <i class="fa fa-files-o"></i>
-                <span>Groups</span>
+                <span>Autorizaciones</span>
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
               </a>
               <ul class="treeview-menu">
                 <?php if(in_array('createGroup', $user_permission)): ?>
-                  <li id="addGroupNav"><a href="<?php echo base_url('groups/create') ?>"><i class="fa fa-circle-o"></i> Add Group</a></li>
+                  <li id="addGroupNav"><a href="<?php echo base_url('groups/create') ?>"><i class="fa fa-circle-o"></i> Agregar Grupo</a></li>
                 <?php endif; ?>
                 <?php if(in_array('updateGroup', $user_permission) || in_array('viewGroup', $user_permission) || in_array('deleteGroup', $user_permission)): ?>
-                <li id="manageGroupNav"><a href="<?php echo base_url('groups') ?>"><i class="fa fa-circle-o"></i> Manage Groups</a></li>
+                <li id="manageGroupNav"><a href="<?php echo base_url('groups') ?>"><i class="fa fa-circle-o"></i>Grupos Autorizados</a></li>
                 <?php endif; ?>
               </ul>
             </li>
           <?php endif; ?>
 
-
+          <!-- MENULI FABRICANTES -->
           <?php if(in_array('createBrand', $user_permission) || in_array('updateBrand', $user_permission) || in_array('viewBrand', $user_permission) || in_array('deleteBrand', $user_permission)): ?>
             <li id="brandNav">
               <a href="<?php echo base_url('brands/') ?>">
-                <i class="glyphicon glyphicon-tags"></i> <span>Brands</span>
+                <i class="glyphicon glyphicon-tags"></i> <span>Fabricantes</span>
               </a>
             </li>
           <?php endif; ?>
 
+          <!-- MENULI PART NUMBERS -->
           <?php if(in_array('createCategory', $user_permission) || in_array('updateCategory', $user_permission) || in_array('viewCategory', $user_permission) || in_array('deleteCategory', $user_permission)): ?>
             <li id="categoryNav">
               <a href="<?php echo base_url('category/') ?>">
-                <i class="fa fa-files-o"></i> <span>Category</span>
+                <i class="fa fa-files-o"></i> <span>P/N</span>
               </a>
             </li>
           <?php endif; ?>
 
+          <!-- MENULI PROPIETARIOS -->
           <?php if(in_array('createStore', $user_permission) || in_array('updateStore', $user_permission) || in_array('viewStore', $user_permission) || in_array('deleteStore', $user_permission)): ?>
             <li id="storeNav">
               <a href="<?php echo base_url('stores/') ?>">
-                <i class="fa fa-files-o"></i> <span>Stores</span>
+                <i class="fa fa-files-o"></i> <span>Propietarios</span>
               </a>
             </li>
           <?php endif; ?>
 
+           <!-- MENULI TECNICO -->
           <?php if(in_array('createAttribute', $user_permission) || in_array('updateAttribute', $user_permission) || in_array('viewAttribute', $user_permission) || in_array('deleteAttribute', $user_permission)): ?>
           <li id="attributeNav">
             <a href="<?php echo base_url('attributes/') ?>">
-              <i class="fa fa-files-o"></i> <span>Attributes</span>
+              <i class="fa fa-files-o"></i> <span>Técnicos</span>
             </a>
           </li>
           <?php endif; ?>
@@ -91,7 +96,7 @@
             <li class="treeview" id="mainProductNav">
               <a href="#">
                 <i class="fa fa-cube"></i>
-                <span>Products</span>
+                <span>Artículos</span>
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
@@ -112,7 +117,7 @@
             <li class="treeview" id="mainOrdersNav">
               <a href="#">
                 <i class="fa fa-dollar"></i>
-                <span>Orders</span>
+                <span>Trazas</span>
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
@@ -131,14 +136,14 @@
           <?php if(in_array('viewReports', $user_permission)): ?>
             <li id="reportNav">
               <a href="<?php echo base_url('reports/') ?>">
-                <i class="glyphicon glyphicon-stats"></i> <span>Reports</span>
+                <i class="glyphicon glyphicon-stats"></i> <span>Reportes</span>
               </a>
             </li>
           <?php endif; ?>
 
 
           <?php if(in_array('updateCompany', $user_permission)): ?>
-            <li id="companyNav"><a href="<?php echo base_url('company/') ?>"><i class="fa fa-files-o"></i> <span>Company</span></a></li>
+            <li id="companyNav"><a href="<?php echo base_url('company/') ?>"><i class="fa fa-files-o"></i> <span>Configuración</span></a></li>
           <?php endif; ?>
 
         
@@ -146,15 +151,15 @@
         <!-- <li class="header">Settings</li> -->
 
         <?php if(in_array('viewProfile', $user_permission)): ?>
-          <li><a href="<?php echo base_url('users/profile/') ?>"><i class="fa fa-user-o"></i> <span>Profile</span></a></li>
+          <li><a href="<?php echo base_url('users/profile/') ?>"><i class="fa fa-user-o"></i> <span>Perfil</span></a></li>
         <?php endif; ?>
         <?php if(in_array('updateSetting', $user_permission)): ?>
-          <li><a href="<?php echo base_url('users/setting/') ?>"><i class="fa fa-wrench"></i> <span>Setting</span></a></li>
+          <li><a href="<?php echo base_url('users/setting/') ?>"><i class="fa fa-wrench"></i> <span>Ajustes</span></a></li>
         <?php endif; ?>
 
         <?php endif; ?>
         <!-- user permission info -->
-        <li><a href="<?php echo base_url('auth/logout') ?>"><i class="glyphicon glyphicon-log-out"></i> <span>Logout</span></a></li>
+        <li><a href="<?php echo base_url('auth/logout') ?>"><i class="glyphicon glyphicon-log-out"></i> <span>Cerrar Sesión</span></a></li>
 
       </ul>
     </section>

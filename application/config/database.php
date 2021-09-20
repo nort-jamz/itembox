@@ -102,10 +102,6 @@ if($_SERVER['HTTP_HOST'] == "itembox.disening.com"){
 } else {
 	$db['default'] = array(
 		'dsn'	=> '',
-		// 'hostname' => 'localhost',
-		// 'username' => 'darkqwiq_itembox',
-		// 'password' => 'nortmadrid203327',
-		// 'database' => 'darkqwiq_itembox',
 		 'hostname' => 'localhost',
 		 'username' => 'root',
 		'password' => '',
@@ -124,4 +120,5 @@ if($_SERVER['HTTP_HOST'] == "itembox.disening.com"){
 		'stricton' => FALSE,
 		'failover' => array(),
 		'save_queries' => TRUE
-}
+	);
+};
